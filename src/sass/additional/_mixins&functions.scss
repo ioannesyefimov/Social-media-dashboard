@@ -1,0 +1,46 @@
+@use 'sass:list';
+@use '../variables/colors&fonts' as *; 
+
+$break-points: (
+    "desktop" : 1200px,
+    "tablet": 650px
+);
+
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+};
+
+@function weights($weight-name){
+    @return map-get($font-weights, $weight-name)
+};
+@function screenSize($screen) {
+    @return map-get($break-points, $screen)
+};
+
+@mixin themeSwitcher($text, $bg){
+    transition: all 1s ease-in-out;
+
+    @if list.length($text) == 0{
+        background-color: $bg;
+    } @else if(list.length($bg) == 0){
+        color: $text;
+    } @else {
+        color: $text;
+        background-color: $bg;
+    }
+    @if list.length($bg) == 1{
+        background-color: $bg;
+    }@else {
+        background-image: linear-gradient(to top, $bg);
+    }
+}
+
+@mixin media($screen) {
+    @media only screen and (min-width: $screen ){
+        @content;
+    }
+}

@@ -1,0 +1,79 @@
+@use './mixins&functions' as *;
+@use './themes&data' as th;
+@use '../variables/colors&fonts'as *;
+
+
+.outer-container {
+    @include media(screenSize(tablet)){
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .header {
+        @include media(screenSize(tablet)){
+            grid-template-areas: 
+            "text  switch";
+            grid-template-columns: 65% 1fr;
+            padding: 2rem clamp(3rem, -1.937rem + 12.152vw, 9rem) 7rem;
+            gap: 0;
+            place-content: start;
+            
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+    
+    .section1 {
+        @include media(screenSize(tablet)) {
+              margin-top: 8rem;
+ 
+         }
+     }
+     .section2 {
+        @include media(screenSize(tablet)) {
+             gridn-column: 1/-1;
+             grid-row: 3/4;
+         }
+         
+         margin-top: 3rem;
+     }
+     
+     .s-dashboard-container {
+        @include media(screenSize(tablet)){
+             grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+             grid-template-rows: repeat(auto-fill, minmax(14rem, min(5rem, 1fr)));
+             padding: 0rem clamp(3rem, -1.937rem + 12.152vw, 9rem);
+         }
+        }
+
+    .overview-container {
+        @include media(screenSize(tablet)){
+             grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+                grid-template-rows: repeat(auto-fill, minmax(14rem, min(15rem, 1fr)));
+                padding: 0rem clamp(3rem, -1.937rem + 12.152vw, 9rem);
+
+                .section2-title {
+                    grid-column: 1/-1;
+                    grid-row: 1/2;
+                }
+            }
+         }
+     .flex-group, .flex-group2 {
+        @include flexCenter(row);
+            gap:.3rem;
+        }
+
+    label[name=switcher]{
+        @include media(screenSize(tablet)) {
+             grid-area: switch;
+              width: auto;
+            .switcher {
+                 margin-left: none;
+            }
+                
+         }
+            
+     }       
+}   
