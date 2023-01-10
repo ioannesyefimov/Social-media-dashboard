@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body >
+
+  <main class="outer-container" data-is-light="false">
+    <header class="header" >
+      <div class="header-group">
+        <h1 class="header-title">Social Media Dashboard</h1>
+        <p class="header-text">Total Followers: 23,004</p>
+      </div>
+      
+        <label name='switcher' for="checkbox">Dark Mode
+          <button class="btn">
+            <input type="checkbox" name="mode-switcher" class="switcher" data-is-checked="false">
+          </button>
+        </label>
+    </header>
+    <div class="section1">
+      <div class="s-dashboard-container">
+        <div class="dashboard-card">
+          <div class="flex-group">
+            <img src="images/icon-facebook.svg" alt="">
+            <p class="acc-name">@nathanf</p>
+          </div>
+          <h2 class="followers-counter">1987</h2>
+          <p class="f-reaction">followers</p>
+    
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="today-counter">12</span></div>
+        </div>
+        <div class="dashboard-card">
+          <div class="flex-group">
+            <img src="images/icon-twitter.svg" alt="">
+            <p class="acc-name">@nathanf</p>
+          </div>
+          <h2 class="followers-counter">1044</h2>
+          <p class="f-reaction">followers</p>
+    
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="today-counter">99</span></div>
+        </div>
+        <div class="dashboard-card">
+          <div class="flex-group">
+            <img src="images/icon-instagram.svg" alt="">
+            <p class="acc-name">@realnathanf</p>
+          </div>
+          <h2 class="followers-counter">11k</h2>
+          <p class="f-reaction">followers</p>
+    
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="today-counter">1099</span></div>
+        </div>
+        <div class="dashboard-card">
+          <div class="flex-group">
+            <img src="images/icon-youtube.svg" alt="">
+            <p class="acc-name">Nathan F.</p>
+          </div>
+          <h2 id='yt-counter'class="followers-counter">8239</h2>
+          <p class="f-reaction">subscribers</p>
+    
+          <div class="flex-group2" data-is-up="false">
+            <img src="images/icon-down.svg" alt="">
+            <span class="today-counter">144</span></div>
+        </div>
+      </div>
+    </div>
+    <section class="section2">
+      <div class="overview-container">
+        <h3 class="section2-title">Overview - Today</h3>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Page Views</p>
+            <img src="images/icon-facebook.svg" alt="">
+          </div>
+          <p class="view-counter">87</p>
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="view-percent">3</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Likes</p>
+            <img src="images/icon-facebook.svg" alt="">
+          </div>
+          <p class="view-counter">52</p>
+          <div class="flex-group2" data-is-up="false">
+            <img src="images/icon-down.svg" alt="">
+            <span class="view-percent">2</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Likes</p>
+            <img src="images/icon-instagram.svg" alt="">
+          </div>
+          <p class="view-counter">5462</p>
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="view-percent">2257</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Profile Views</p>
+            <img src="images/icon-instagram.svg" alt="">
+          </div>
+          <p class="view-counter">52k</p>
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="view-percent">1375</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Retweets</p>
+            <img src="images/icon-twitter.svg" alt="">
+          </div>
+          <p class="view-counter">117</p>
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="view-percent">303</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Likes</p>
+            <img src="images/icon-twitter.svg" alt="">
+          </div>
+          <p class="view-counter">507</p>
+          <div class="flex-group2" data-is-up="true">
+            <img src="images/icon-up.svg" alt="">
+            <span class="view-percent">553</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Likes</p>
+            <img src="images/icon-youtube.svg" alt="">
+          </div>
+          <p class="view-counter">107</p>
+          <div class="flex-group2" data-is-up="false">
+            <img src="images/icon-down.svg" alt="">
+            <span class="view-percent">19</span>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="flex-group">
+            <p class="view-reaction">Total Views</p>
+            <img src="images/icon-youtube.svg" alt="">
+          </div>
+          <p class="view-counter">1407</p>
+          <div class="flex-group2" data-is-up="false">
+            <img src="images/icon-down.svg" alt="">
+            <span class="view-percent">12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/ioannesyefimov">Ioannes</a>.
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
